@@ -12,6 +12,7 @@
 - setup postgres database with name dropbox and update application.properties `create DATABASE dropbox;`
 - update the application.properties property `localFileStoragePath` for `write-able` local file storage path
 - change port of application if needed
+- make sure that java21 environment is there to run it.
 
 ## command to run
 - `mvn clean package`
