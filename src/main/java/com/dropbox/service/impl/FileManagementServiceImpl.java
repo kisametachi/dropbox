@@ -8,10 +8,7 @@ import com.dropbox.response.FileMetaDataResponse;
 import com.dropbox.response.FileResponseDTO;
 import com.dropbox.service.FileManagementService;
 import com.dropbox.service.FileStorageEngine;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,7 +19,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-@Slf4j
 @Component
 @RequiredArgsConstructor
 public class FileManagementServiceImpl implements FileManagementService {

@@ -5,17 +5,18 @@
 - read file : api to read file by id
 - delete file : api to delete existing file by id
 
-## swagger urls : http://localhost:8099/swagger-ui/index.html#/
+## swagger url
+- http://localhost:8900/swagger-ui/index.html#/
 
 
-## steps to run
-- setup postgres database with name dropbox and update application.properties `create DATABASE dropbox;`
-- update the application.properties property `localFileStoragePath` for `write-able` local file storage path
-- change port of application if needed
-- make sure that java21 environment is there to run it.
+## prerequisite to run the app
+-> docker must be running
 
-## command to run
-- `mvn clean package`
-- `java -jar target/dropbox-0.0.1-SNAPSHOT.jar`
+## command to start the app
+- cd to project directory
+- ./startup.sh
+
+## command to stop the app
+- ./shutdown.sh
 
     

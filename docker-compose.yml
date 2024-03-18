@@ -1,0 +1,26 @@
+version: '2.24.6-desktop.1'
+
+services:
+  db:
+      image: postgres:latest
+      ports:
+        - "5431:5432"
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=
+        - POSTGRES_DB=dropbox
+        - POSTGRES_HOST_AUTH_METHOD=trust
+  app:
+    build:
+      context: .
+    ports:
+      - "8900:8900"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/dropbox
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=
+      - SPRING_JPA_DATABASE=postgresql
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
